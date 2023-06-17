@@ -1,0 +1,14 @@
+{% extends 'school/base.html' %}
+
+{% block content %}
+
+<div class="container p-3">
+<center><h3>Create Student</h3></center>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button class="btn btn-outline-primary">Submit</button>
+</form>
+</div>
+
+{% endblock content %}
