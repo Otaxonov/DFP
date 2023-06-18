@@ -2,11 +2,13 @@
 
 {% block content %}
 
-<center><h3>Create Student</h3></center>
-<form action="{% url 'student_create' %}" method="post">
+
+<center><h3>Update Profile</h3></center>
+<form action="{% url 'profile_update' %}" method="post">
     {% csrf_token %}
     {{ form }}
     <button class="btn btn-outline-primary">Submit</button>
 </form>
+
 
 {% endblock content %}

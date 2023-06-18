@@ -11,8 +11,20 @@
 
 {% include 'includes/navbar.html' %}
 
+<div class="container mt-5">
+
+    {% if messages %}
+<div>
+    {% for message in messages %}
+        <span class="form-control rounded-0 border-0 badge bg-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} p-2 m-0">{{ message }}</span>
+    {% endfor %}
+</div>
+{% endif %}
+
 {% block content %}
 {% endblock content %}
+
+</div>
 
 {% block scripts %}
 {% endblock scripts %}

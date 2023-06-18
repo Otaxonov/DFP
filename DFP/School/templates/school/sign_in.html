@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<center><h3>Create Student</h3></center>
-<form action="{% url 'student_create' %}" method="post">
+<center><h3>Sign In</h3></center>
+<form action="{% url 'sign_in' %}" method="post">
     {% csrf_token %}
     {{ form }}
     <button class="btn btn-outline-primary">Submit</button>
